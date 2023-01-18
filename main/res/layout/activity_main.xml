@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/instructions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="@string/text2"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/textView1"
+        app:layout_constraintHorizontal_bias="0.528"
+        tools:layout_editor_absoluteY="28dp" />
+
+
+    <TextView
+        android:id="@+id/calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcuate of:"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textView2"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <RadioGroup
+        android:id="@+id/level_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:checkedButton="@id/option_easy"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@id/textView2">
+
+        <RadioButton
+            android:id="@+id/option_easy"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="@string/easy" />
+
+        <RadioButton
+            android:id="@+id/option_medium"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="@string/medium" />
+
+        <RadioButton
+            android:id="@+id/option_hard"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="@string/hard" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/first_num"
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="44dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="10dp"
+        android:text="2"
+        android:textSize="50dp"
+
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="321dp" />
+
+    <TextView
+        android:id="@+id/symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="3dp"
+        android:text="+"
+        android:textSize="50dp"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="321dp" />
+
+
+    <TextView
+        android:id="@+id/sec_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="272dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="10dp"
+        android:text="55"
+        android:textSize="50dp"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="321dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:hint="InputAnswer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sec_num"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/check_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/check"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="635dp"
+        app:layout_constraintBaseline_toBottomOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/cost_of_service_edit_text"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="68dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@id/check_button"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="64dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
